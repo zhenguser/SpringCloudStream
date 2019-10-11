@@ -1,0 +1,16 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: spring-cloud-stream
+#  rabbitmq:
+#    host: 192.168.174.128
+#    port: 5672
+#    username: guest
+#    password: guest
+  cloud:
+    stream:
+      bindings:
+        my_stream_channel: ###指定 管道名称
+          #指定该应用实例属于 stream 消费组
+          group: stream
